@@ -235,7 +235,7 @@ func _main() error {
 					continue
 				}
 				scanColumnsSet.Add(scanChildNode.GetShortRepresentation().GetDescription())
-				scanVariableMap[scanChild.GetVariable()] = "$" + scanChildNode.GetShortRepresentation().GetDescription()
+				scanVariableMap["$" + scanChild.GetVariable()] = scanChildNode.GetShortRepresentation().GetDescription()
 			}
 			tableScanPath := paths[pn.GetIndex()]
 			for _, idxNode := range planNodes {
